@@ -1,6 +1,5 @@
 import vtk
 import numpy as np
-import csv
 import pandas as pd
 
 # Mesh rendering #
@@ -91,14 +90,17 @@ vtkRenderWindow = vtk.vtkRenderWindow()
 # Initialize a VTK renderer.
 # Contains the actors to render
 vtkRenderer = vtk.vtkRenderer()
+
 # Add the VTK renderer to the VTK render window
 vtkRenderWindow.AddRenderer(vtkRenderer)
+
 # define the renderer
 vtkRenderer.AddActor(vtkActor)
 
 # Set camera and background data
 vtkRenderer.ResetCamera()
 vtkRenderWindow.Render()
+
 # Enable user interface interactor
 interactor = vtk.vtkRenderWindowInteractor()
 interactor.SetRenderWindow(vtkRenderWindow)
