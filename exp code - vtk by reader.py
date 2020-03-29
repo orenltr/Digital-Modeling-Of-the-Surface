@@ -101,8 +101,26 @@ vtkRenderer.AddActor(vtkActor)
 vtkRenderer.ResetCamera()
 vtkRenderWindow.Render()
 
+# Point representation
+vtkActor.GetProperty().SetRepresentationToPoints()
+vtkRenderWindow.Render()
+
+# # Surface representation
+# vtkActor.GetProperty().SetRepresentationToSurface ()
+# vtkRenderWindow.Render()
+# # illumination
+# # vtkActor.GetProperty().LightingOff
+# vtkActor.GetProperty().LightingOn
+
+# # Wireframe representation
+# vtkActor.GetProperty().SetRepresentationToWireframe ()
+# vtkRenderWindow.Render()
+
 # Enable user interface interactor
 interactor = vtk.vtkRenderWindowInteractor()
 interactor.SetRenderWindow(vtkRenderWindow)
 vtkRenderWindow.Render()
 interactor.Start()
+
+
+
